@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<body>
+    
+    <div id="main-part" >
+        <div class="inside">
+            <div class="theme">
+                <h3>Calculator</h3>
+                <button class="sun" onclick="switchmode(), flipmode()" type="menu"><span class="material-symbols-outlined" style="color: rgb(215, 215, 215);cursor: pointer;"> contrast </span></button>
+            </div>
+            <table class="main-table">
+                <div class="display">
+                    <input type="text" id="screen" style="color: aliceblue;" readonly placeholder="0 " >
+                </div>
+                <div class="backs">
+                    <button id="nback" onclick="backspace()"><span class="material-symbols-outlined" style="color: rgb(244, 244, 244);cursor: pointer;"> backspace </span></button>
+                </div>
+                <tr>
+                    <td colspan="2"><button class="btn oprn" onclick="clean()">C</button></td>
+                    <td><button class="btn oprn" onclick="addR('/')">/</button></td>
+                    <td><button class="btn oprn" onclick="addR('*')">*</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn num" onclick="addR('7')">7</button></td>
+                    <td><button class="btn num" onclick="addR('8')">8</button></td>
+                    <td><button class="btn num" onclick="addR('9')">9</button></td>
+                    <td><button class="btn oprn" onclick="addR('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn num" onclick="addR('4')">4</button></td>
+                    <td><button class="btn num" onclick="addR('5')">5</button></td>
+                    <td><button class="btn num" onclick="addR('6')">6</button></td>
+                    <td><button class="btn oprn" onclick="addR('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn num" onclick="addR('1')">1</button></td>
+                    <td><button class="btn num" onclick="addR('2')">2</button></td>
+                    <td><button class="btn num" onclick="addR('3')">3</button></td>
+                    <td rowspan="2"><button class="opeq" onclick="calculate()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="btn num" onclick="addR('0')">0</button></td>
+                    <td><button class="btn num" onclick="addR('.')">.</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
